@@ -1,0 +1,67 @@
+.home section{
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.home section h2{
+  padding-bottom: 30px;
+}
+
+.fresh{
+  background-color: #42ab9e;
+  color: #ffffff;
+}
+
+.fresh h2{
+  font-size: 2.5em;
+}
+
+.clean{
+  background-color: #dfdce3;
+  color: #000000;
+}
+
+.btn-sunshine {
+    color: #ffffff;
+    background-color: #f7b733;
+    border-color: #f7b733;
+}
+
+
+.bubble {
+  position: relative;
+  width: 500px;
+  padding: 15px;
+  background: #FFFFFF;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+}
+
+.bubble-left:after {
+  border-width: 15px 15px 15px 0;
+  left: -15px;
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-color: transparent #FFFFFF;
+    display: block;
+    width: 0;
+    z-index: 1;
+    margin-top: -15px;
+    top: 50%;
+}
+
+.bubble-right:after {
+  border-width: 15px 0 15px 15px;
+  right: -15px;
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-color: transparent #FFFFFF;
+    display: block;
+    width: 0;
+    z-index: 1;
+    margin-top: -15px;
+    top: 50%;
+}
