@@ -1,0 +1,17 @@
+.services section{
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.services section h2{
+  padding-bottom: 30px;
+}
+
+.fresh{
+  background-color: #42ab9e;
+  color: #ffffff;
+}
+
+.fresh h2{
+  font-size: 2.5em;
+}
