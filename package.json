@@ -1,6 +1,9 @@
 {
   "name": "CStreet",
   "version": "1.0.0",
+  "engines": {
+    "npm": "4.0.5"
+  },
   "description": "CStreet",
   "scripts": {
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
