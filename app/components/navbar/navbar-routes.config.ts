@@ -12,10 +12,12 @@ export const ROUTES: RouteInfo[] = [
 import { HomeComponent } from '../home/home.component';
 import { ServicesComponent } from '../services/services.component';
 import { AboutComponent } from '../about/about.component';
+import { SignupComponent } from '../signup/signup.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent},
     { path: 'services', component: ServicesComponent },
+    { path: 'signup', component: SignupComponent },
     { path: 'about',  component: AboutComponent},
     { path: 'contact', component: AboutComponent}
 ];

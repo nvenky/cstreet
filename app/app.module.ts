@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent }  from './app.component';
 import { HomeComponent } from './components/home/home.component';
+import { SignupComponent } from './components/signup/signup.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutComponent } from './components/about/about.component';
 import { ServicesComponent } from './components/services/services.component';
@@ -17,7 +18,7 @@ import { NavbarRoutes } from './components/navbar/navbar-routes.config';
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpModule, NavbarRoutes],
   declarations: [ AppComponent, HomeComponent, AboutComponent, NavbarComponent,
-                  FooterComponent, ServicesComponent ],
+                  FooterComponent, ServicesComponent, SignupComponent ],
   bootstrap:    [ AppComponent ]
 })
 

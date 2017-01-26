@@ -1,14 +1,51 @@
 .active {
-  color: #fff;
+  border-radius: 3px;
+  background-color: #ff5992;
 }
 
 .logo{
-  width: 100px;
   height: 100px;
+}
+
+.nav-link {
+  color: white;
+  margin: 10px;
 }
 
 .navbar-toggler {
   border: solid 1px silver;
   border-radius: 2px;
   color: #eee;
+}
+
+.prussian-blue{
+  background-color: #0b3c5d;
+}
+
+.sky-blue{
+  background-color: #328cc1;
+}
+
+.gold{
+  background-color: #d9b310;
+}
+
+.ivory-black{
+  background-color: #1d2731;
+}
+
+.electric-blue{
+  background-color: #4cdef5;
+}
+
+.electric-green{
+  background-color: #a4d555;
+}
+
+.blush{
+  background-color: #ff5992;
+}
+
+.orchid{
+  background-color: #841983;
 }
