@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ROUTES } from './navbar-routes.config';
 import { MenuType } from './navbar.metadata';
+import { Auth } from './../../services/auth.service';
 
 @Component({
   moduleId: module.id,
   selector: 'navbar',
+  providers: [ Auth ],
   templateUrl: 'navbar.component.html',
   styleUrls: [ 'navbar.component.css' ]
 })
@@ -13,7 +15,7 @@ export class NavbarComponent implements OnInit {
   public brandMenu: any;
   isCollapsed = false;
 
-  constructor() {}
+  constructor(private auth: Auth) { }
 
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem.menuType !== MenuType.BRAND);

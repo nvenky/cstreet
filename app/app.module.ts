@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { AUTH_PROVIDERS } from 'angular2-jwt';
 
 import { AppComponent }  from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -19,6 +20,7 @@ import { NavbarRoutes } from './components/navbar/navbar-routes.config';
   imports:      [ BrowserModule, FormsModule, HttpModule, NavbarRoutes],
   declarations: [ AppComponent, HomeComponent, AboutComponent, NavbarComponent,
                   FooterComponent, ServicesComponent, SignupComponent ],
+  providers:    [ AUTH_PROVIDERS ],
   bootstrap:    [ AppComponent ]
 })
 

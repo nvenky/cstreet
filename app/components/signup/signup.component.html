@@ -1,60 +1,91 @@
-{{diagnostic}}
-
 <div id="signup" class="container my-5">
+  {{diagnostic}}
   <h2>Welcome to Caring Street. Great decision.</h2>
-  <form class="mt-5" method='post' (ngSubmit)="signUp(form.value)">
+  <form class="mt-5" (ngSubmit)="signUp($event)" method='post' #signupForm="ngForm" novalidate="">
     <div class="form-group row">
       <label for="example-text-input" class="col-2 col-form-label">Need Care for</label>
       <div class="col-5">
-        <div class="btn-group" data-toggle="buttons">
-          <label class="btn btn-outline-success mr-3">
-            <input type="radio" [(ngMo  del)]="model.careFor" (ngModelChange)="careForChange()"  name="careFor" value="me" autocomplete="off"> You
+        <div class="btn-group">
+          <label class="mr-3">
+            <input type="radio" [(ngModel)]="model.careFor" name="careFor" [value]="'me'"> You
           </label>
-          <label class="btn btn-outline-success">
-            <input type="radio" [(ngModel)]="model.careFor" (ngModelChange)="careForChange()"  name="careFor" value="lovedOne" autocomplete="off">Loved one
+          <label class="">
+            <input type="radio" [(ngModel)]="model.careFor" name="careFor"  [value]="'lovedOne'">Loved one
           </label>
         </div>
       </div>
     </div>
-    <div class="form-group row" *ngIf="careFor != 'lovedOne'">
-      <label for="firstName" class="col-2 col-form-label">Your First Name</label>
-      <div class="col-5">
-        <input class="form-control" [(ngModel)]="model.firstName" name="firstName" placeholder="eg. John" required>
+
+    <div  *ngIf="model.careFor !== ''">
+      <div  *ngIf="model.careFor == 'lovedOne'">
+        <div class="form-group row">
+          <label for="firstName" class="col-2 col-form-label">Your First Name</label>
+          <div class="col-5">
+            <input class="form-control" [(ngModel)]="model.firstName" name="firstName" placeholder="eg. John" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="lastName" class="col-2 col-form-label">Your Last Name</label>
+          <div class="col-5">
+            <input class="form-control" [(ngModel)]="model.lastName" name="lastName" id="lastName" placeholder="eg. Doe" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="firstName" class="col-2 col-form-label">Thier First Name</label>
+          <div class="col-5">
+            <input class="form-control" [(ngModel)]="model.theirfirstName" name="theirfirstName" placeholder="eg. Jane" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="lastName" class="col-2 col-form-label">Thier Last Name</label>
+          <div class="col-5">
+            <input class="form-control" [(ngModel)]="model.thierlastName" name="thierlastName" placeholder="eg. Roe" required>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="form-group row">
-      <label for="lastName" class="col-2 col-form-label">Your Last Name</label>
-      <div class="col-5">
-        <input class="form-control" [(ngModel)]="model.lastName" name="lastName" id="lastName" placeholder="eg. Doe" required>
+      <div  *ngIf="model.careFor == 'me'">
+        <div class="form-group row">
+          <label for="firstName" class="col-2 col-form-label">First Name</label>
+          <div class="col-5">
+            <input class="form-control" [(ngModel)]="model.firstName" name="firstName" placeholder="eg. John" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="lastName" class="col-2 col-form-label">Last Name</label>
+          <div class="col-5">
+            <input class="form-control" [(ngModel)]="model.lastName" name="lastName" id="lastName" placeholder="eg. Doe" required>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="form-group row">
-      <label for="email" class="col-2 col-form-label">Email</label>
-      <div class="col-5">
-        <input class="form-control" [(ngModel)]="model.email" name="email" type="email" id="email" placeholder="eg. john.doe@gmail.com" required>
+      <div class="form-group row">
+        <label for="email" class="col-2 col-form-label">Email</label>
+        <div class="col-5">
+          <input class="form-control" [(ngModel)]="model.email" name="email" type="email" id="email" placeholder="eg. john.doe@gmail.com" required>
+        </div>
       </div>
-    </div>
-    <div class="form-group row">
-      <label for="password" class="col-2 col-form-label">Password</label>
-      <div class="col-5">
-        <input class="form-control" [(ngModel)]="model.password" name="password" type="password" id="password" placeholder="****" min="8" required>
+      <div class="form-group row">
+        <label for="password" class="col-2 col-form-label">Password</label>
+        <div class="col-5">
+          <input class="form-control" [(ngModel)]="model.password" name="password" type="password" id="password" placeholder="****" min="8" required>
+        </div>
       </div>
-    </div>
-    <div class="form-group row">
-      <label for="confirmPassword" class="col-2 col-form-label">Confirm Password</label>
-      <div class="col-5">
-        <input class="form-control" [(ngModel)]="model.confirmPassword" name="confirmPassword" type="confirmPassword" id="confirmPassword" placeholder="****" min="8" required>
+      <div class="form-group row">
+        <label for="confirmPassword" class="col-2 col-form-label">Confirm Password</label>
+        <div class="col-5">
+          <input class="form-control" [(ngModel)]="model.confirmPassword" name="confirmPassword" type="password" id="confirmPassword" placeholder="****" min="8" required>
+        </div>
       </div>
-    </div>
-    <div class="form-group row">
-      <label for="mobile" class="col-2 col-form-label">Mobile</label>
-      <div class="col-5">
-        <input class="form-control" [(ngModel)]="model.mobile" type="mobile" id="mobile" name="mobile" placeholder="eg. 0400 000 000" min="10" required>
+      <div class="form-group row">
+        <label for="mobile" class="col-2 col-form-label">Mobile</label>
+        <div class="col-5">
+          <input class="form-control" [(ngModel)]="model.mobile" type="mobile" id="mobile" name="mobile" placeholder="eg. 0400 000 000" min="10" required>
+        </div>
       </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-5">
-        <button type="submit" class="btn btn-success">Sign up</button>
+      <div class="form-group row">
+        <div class="col-5">
+          <!--button type="submit" class="btn btn-success" [disabled]="!signupForm.form.valid">Sign up</button -->
+            <button type="submit" class="btn btn-success">Sign up</button>
+        </div>
       </div>
     </div>
   </form>

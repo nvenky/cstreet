@@ -10,8 +10,11 @@ import { User }    from '../../models/user';
 export class SignupComponent {
   model = new User('', '', '', '', '', '', '', '');
 
-  signup(formValue: any): void{
+  signup(event:any){
+    event.preventDefault();
     console.log('Form Data: ');
-    console.log(formValue);
+    console.log(this.model);
   }
+
+  get diagnostic() { return JSON.stringify(this.model); }
 }
