@@ -14,13 +14,15 @@ import { ServicesComponent } from './components/services/services.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavbarRoutes } from './components/navbar/navbar-routes.config';
 
-// import { Routing } from './app.routing';
+
+import { UserService } from './services/user.service';
+import { Auth } from './services/auth.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpModule, NavbarRoutes],
   declarations: [ AppComponent, HomeComponent, AboutComponent, NavbarComponent,
                   FooterComponent, ServicesComponent, SignupComponent ],
-  providers:    [ AUTH_PROVIDERS ],
+  providers:    [ AUTH_PROVIDERS, UserService, Auth ],
   bootstrap:    [ AppComponent ]
 })
 

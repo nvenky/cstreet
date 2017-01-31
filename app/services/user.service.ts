@@ -17,8 +17,7 @@ export class UserService {
 
     getUser(authId: string): Observable<User> {
         return this.authHttp.get(this.userBaseUrl + authId)
-            .map(response => response.json().data as User);
+            .map(response => response.json() as User);
             // .subscribe(result => currentUser.next(result))
     }
-
 }

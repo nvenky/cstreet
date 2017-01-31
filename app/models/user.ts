@@ -9,6 +9,6 @@ export class User {
     public confirmPassword: string,
     public mobile: string,
     public authId: string,
-    public registrationCompleted: boolean
-  ) {  }
+    public registrationComplete: boolean
+  ) {  }  
 };
