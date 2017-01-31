@@ -20,8 +20,8 @@ export class NavbarComponent implements OnInit {
 
     constructor(private auth: Auth, private userService: UserService) {
         this.auth.userAuthorizedObservable.subscribe((authId: string) => {
-            if (authId === null) {
-                return null;
+            if (authId === null || authId === '') {
+                this.currentUser = null;
             }
             console.log('user authorized ' + authId);
             userService.getUser(authId).subscribe(user => this.currentUser = user);

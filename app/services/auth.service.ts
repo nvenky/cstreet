@@ -24,7 +24,7 @@ export class Auth {
   };
 
   private lock = new Auth0Lock(myConfig.clientID, myConfig.domain, this.options);
- userAuthorized = new BehaviorSubject<string>(null);
+  userAuthorized = new BehaviorSubject<string>(null);
   public userAuthorizedObservable = this.userAuthorized.asObservable();
 
 
@@ -38,10 +38,15 @@ export class Auth {
           return;
         }
         localStorage.setItem('accessToken', authResult.accessToken);
+        localStorage.setItem('sub', authResult.idTokenPayload.sub);
         localStorage.setItem('profile', JSON.stringify(profile));
         this.userAuthorized.next(authResult.idTokenPayload.sub);
       });
     });
+
+    if (this.authenticated()) {
+      this.userAuthorized.next(localStorage.getItem('sub'));
+    }
   }
 
 

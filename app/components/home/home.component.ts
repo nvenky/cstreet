@@ -14,9 +14,9 @@ export class HomeComponent {
   bookings: Booking[];
 
   constructor(bookingService: BookingService) {
-    bookingService.getBookings().subscribe(
-      (bookings: Booking[]) => this.bookings = bookings,
-      (error: any) => console.error('An error occurred', error)
-    );
+    // bookingService.getBookings().subscribe(
+    //   (bookings: Booking[]) => this.bookings = bookings,
+    //   (error: any) => console.error('An error occurred', error)
+    // );
   }
 }

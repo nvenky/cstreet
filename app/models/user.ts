@@ -7,6 +7,8 @@ export class User {
     public lastName: string,
     public password: string,
     public confirmPassword: string,
-    public mobile: string
+    public mobile: string,
+    public authId: string,
+    public registrationCompleted: boolean
   ) {  }
 };

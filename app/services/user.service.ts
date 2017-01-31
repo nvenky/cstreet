@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class UserService {
-    private userBaseUrl = GlobalVariables.BASE_API_URL + '/users/';
+    private userBaseUrl = GlobalVariables.BASE_API_URL + 'users/';
     // public currentUser = new ReplaySubject(1);
 
     constructor(private authHttp: AuthHttp) {
