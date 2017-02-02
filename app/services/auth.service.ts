@@ -23,9 +23,13 @@ export class Auth {
         }
     };
 
-    private lock = new Auth0Lock(myConfig.clientID, myConfig.domain, this.options);
-    currentUserSubject = new BehaviorSubject<User>(null);
+    private lock = new Auth0Lock(myConfig.clientID, myConfig.domain);
+    public currentUserSubject = new BehaviorSubject<User>(null);
     public currentUserObservable = this.currentUserSubject.asObservable();
+
+    private authenticationSubject = new BehaviorSubject<string>('');
+    public authenticationObservable = this.authenticationSubject.asObservable();
+
     private currentUser: User;
     private userService: UserService;
 
@@ -42,19 +46,24 @@ export class Auth {
                 localStorage.setItem('accessToken', authResult.accessToken);
                 localStorage.setItem('sub', authResult.idTokenPayload.sub);
                 localStorage.setItem('profile', JSON.stringify(profile));
-                this.fetchUser(authResult.idTokenPayload.sub);
+                this.fetchUser(authResult.idTokenPayload.sub, true);
             });
         });
 
         if (this.authenticated()) {
-            this.fetchUser(localStorage.getItem('sub'));
+            this.fetchUser(localStorage.getItem('sub'), false);
         }
+
+        this.currentUserObservable.subscribe((user: User) => {
+            this.currentUser = user;
+        });
     }
 
 
-    public login() {
+    public login(screen: string) {
         // Call the show method to display the widget.
-        this.lock.show();
+        this.options['initialScreen'] = screen;
+        this.lock.show(this.options);
     };
 
     public authenticated() {
@@ -67,13 +76,16 @@ export class Auth {
         // Remove token from localStorage
         this.currentUser = null;
         localStorage.removeItem('id_token');
+        this.authenticationSubject.next('logout');
     };
 
-    private fetchUser(authId: string) {
+    private fetchUser(authId: string, login: boolean) {
         if (this.currentUser == null || this.currentUser.authId !== authId) {
             this.userService.getUser(authId).subscribe((user: User) => {
-                this.currentUser = user;
                 this.currentUserSubject.next(user);
+                if (login) {
+                  this.authenticationSubject.next('login');
+                }
             });
         }
     }

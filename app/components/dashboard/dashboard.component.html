@@ -1,0 +1,39 @@
+<div id="dashboard" class="container my-5">
+  <h2>Dashboard</h2>
+  <section class="container" id="my-bookings-section">
+    <div class="row mx-y">
+      <div class="col-12 text-right">
+        <button class="btn btn-info ">New Booking</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3 class="my-5">My Bookings</h3>
+        <div id='noBookings' *ngIf="bookings?.length === 0">
+          Sorry, you don't have current bookings. Book Care Now.
+        </div>
+        <div id='bookingsTable' *ngIf="bookings?.length > 0">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Address</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let booking of bookings; let i = index;">
+                <th scope="row">{{i + 1}}</th>
+                <td>{{booking.name}}</td>
+                <td>{{booking.date}}</td>
+                <td>{{booking.address}}</td>
+                <td><a href="#"> View</a> <a href="#" class="mx-3 "> Cancel</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

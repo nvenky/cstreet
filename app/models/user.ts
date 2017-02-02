@@ -1,14 +1,13 @@
 export class User {
   constructor(
+    public id: string,
+    public authId: string,
     public careFor: string,
-    public yourFirstName: string,
-    public yourLastName: string,
+    public elderFirstName: string,
+    public elderLastName: string,
     public firstName: string,
     public lastName: string,
-    public password: string,
-    public confirmPassword: string,
     public mobile: string,
-    public authId: string,
     public registrationComplete: boolean
-  ) {  }  
+  ) {  }
 };

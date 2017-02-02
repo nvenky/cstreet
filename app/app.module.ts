@@ -12,6 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AboutComponent } from './components/about/about.component';
 import { ServicesComponent } from './components/services/services.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavbarRoutes } from './components/navbar/navbar-routes.config';
 
 
@@ -21,7 +22,7 @@ import { Auth } from './services/auth.service';
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpModule, NavbarRoutes],
   declarations: [ AppComponent, HomeComponent, AboutComponent, NavbarComponent,
-                  FooterComponent, ServicesComponent, SignupComponent ],
+                  FooterComponent, ServicesComponent, SignupComponent, DashboardComponent ],
   providers:    [ AUTH_PROVIDERS, UserService, Auth ],
   bootstrap:    [ AppComponent ]
 })

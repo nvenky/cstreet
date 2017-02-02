@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { User } from '../../models/user';
 import { Auth } from '../../services/auth.service';
+import { UserService } from '../../services/user.service';
+import { Router }from '@angular/router';
 
 @Component({
     moduleId: module.id,
@@ -9,9 +11,9 @@ import { Auth } from '../../services/auth.service';
     styleUrls: ['signup.component.css']
 })
 export class SignupComponent {
-    model = new User('', '', '', '', '', '', '', '', '', false);
+    model = new User('', '', '', '', '', '', '', '', false);
 
-    constructor(auth: Auth) {
+    constructor(private auth: Auth, private userService: UserService, private router: Router) {
         auth.currentUserObservable.subscribe((user: User) => {
             if (user !== null) {
                 this.model = user;
@@ -19,11 +21,15 @@ export class SignupComponent {
         });
     }
 
-    signup(event: any) {
-        event.preventDefault();
-        console.log('Form Data: ');
-        console.log(this.model);
+    public updateUser() {
+        this.model.registrationComplete = true;
+        this.userService.update(this.model)
+        .subscribe((updatedUser: User) => {
+          this.auth.currentUserSubject.next(updatedUser);
+          this.router.navigate(['/dashboard'], { skipLocationChange: false });
+        },
+          (err: any) => console.log(err),
+          () => console.log('User Updated')
+        );
     }
-
-    get diagnostic() { return JSON.stringify(this.model); }
 }
