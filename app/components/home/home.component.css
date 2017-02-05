@@ -1,6 +1,25 @@
-.home section{
+.home section {
   padding-top: 100px;
   padding-bottom: 50px;
+}
+
+.home .heading {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.home #carosel-section .heading {
+  color: black;
+}
+
+.home #carosel-section .btn {
+  color: white;
+}
+
+.home section#carosel-section{
+  height: 700px;
+  background-image: url('images/care_1.jpg');
+  background-size: cover;
 }
 
 .home section h2{
@@ -64,4 +83,8 @@
     z-index: 1;
     margin-top: -15px;
     top: 50%;
+}
+
+.no-padding {
+    padding: 0px;
 }

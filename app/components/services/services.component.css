@@ -1,3 +1,13 @@
+.services section#home-care {
+  height: 500px;
+  background-image: url('images/care_2.jpg');
+}
+
+.services .heading {
+  font-size: 3em;
+  font-weight: bold;
+}
+
 .services section{
   padding-top: 100px;
   padding-bottom: 50px;
