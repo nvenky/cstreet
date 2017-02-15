@@ -7,6 +7,7 @@
   "description": "CStreet",
   "scripts": {
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
+    "start_prod": "concurrently \"tsc -w\" \"lite-server\" ",
     "e2e": "tsc && concurrently \"http-server -s\" \"protractor protractor.config.js\" --kill-others --success first",
     "lint": "tslint ./app/**/*.ts -t verbose",
     "lite": "lite-server",
