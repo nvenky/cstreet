@@ -31,10 +31,8 @@ export class Auth {
     public authenticationObservable = this.authenticationSubject.asObservable();
 
     private currentUser: User;
-    private userService: UserService;
 
-    constructor(userService: UserService) {
-        this.userService = userService;
+    constructor(private userService: UserService) {
         // Add callback for lock `authenticated` event
         this.lock.on('authenticated', (authResult: any) => {
             localStorage.setItem('id_token', authResult.idToken);

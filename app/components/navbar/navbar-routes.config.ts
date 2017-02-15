@@ -18,14 +18,17 @@ import { ServicesComponent } from '../services/services.component';
 import { AboutComponent } from '../about/about.component';
 import { SignupComponent } from '../signup/signup.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
+import { NewBookingComponent } from '../newBooking/newBooking.component';
+import { ContactComponent } from '../contact/contact.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent},
     { path: 'dashboard',  component: DashboardComponent },
     { path: 'services', component: ServicesComponent },
     { path: 'signup', component: SignupComponent },
+    { path: 'newBooking',  component: NewBookingComponent },
     { path: 'about',  component: AboutComponent},
-    { path: 'contact', component: AboutComponent}
+    { path: 'contact', component: ContactComponent}
 ];
 
 export const NavbarRoutes: ModuleWithProviders = RouterModule.forRoot(appRoutes);

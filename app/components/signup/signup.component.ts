@@ -11,7 +11,7 @@ import { Router }from '@angular/router';
     styleUrls: ['signup.component.css']
 })
 export class SignupComponent {
-    model = new User('', '', '', '', '', '', '', '', false);
+    model = new User('', '', '', '', '', '', '', '', '', false);
 
     constructor(private auth: Auth, private userService: UserService, private router: Router) {
         auth.currentUserObservable.subscribe((user: User) => {

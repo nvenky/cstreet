@@ -1,7 +1,8 @@
 export class Booking {
   constructor(
-    public name: string,
-    public date: string,
-    public address: string
+    public elderFirstName: string,
+    public elderLastName: string,
+    public address: string,
+    public date: string
   ) {  }
 };

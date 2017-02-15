@@ -7,6 +7,7 @@ export class User {
     public elderLastName: string,
     public firstName: string,
     public lastName: string,
+    public address: string,
     public mobile: string,
     public registrationComplete: boolean
   ) {  }

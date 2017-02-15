@@ -12,8 +12,8 @@ import { Router }from '@angular/router';
 export class DashboardComponent {
     bookings: Booking[] = [];
     constructor(auth: Auth, private router: Router) {
-        this.bookings[0] = new Booking('Mr. A', '02/04/2017', 'St Kilda 3000');
-        this.bookings[1] = new Booking('Mr. B', '22/05/2017', 'Point Cook');
+        this.bookings[0] = new Booking('A', 'B', 'St Kilda 3000', '02/04/2017');
+        this.bookings[1] = new Booking('C', 'D', 'Point Cook', '22/05/2017');
     }
 
 }

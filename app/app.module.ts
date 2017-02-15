@@ -10,20 +10,24 @@ import { HomeComponent } from './components/home/home.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { ServicesComponent } from './components/services/services.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { NewBookingComponent } from './components/newBooking/newBooking.component';
 import { NavbarRoutes } from './components/navbar/navbar-routes.config';
 
 
 import { UserService } from './services/user.service';
 import { Auth } from './services/auth.service';
+import { Global } from './global';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpModule, NavbarRoutes],
   declarations: [ AppComponent, HomeComponent, AboutComponent, NavbarComponent,
-                  FooterComponent, ServicesComponent, SignupComponent, DashboardComponent ],
-  providers:    [ AUTH_PROVIDERS, UserService, Auth ],
+                  FooterComponent, ServicesComponent, SignupComponent, DashboardComponent,
+                  NewBookingComponent, ContactComponent ],
+  providers:    [ AUTH_PROVIDERS, UserService, Auth, Global ],
   bootstrap:    [ AppComponent ]
 })
 

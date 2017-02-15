@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Booking } from '../models/booking';
-import { GlobalVariables } from '../global';
+import { ENV } from '../env';
 import { AuthHttp } from 'angular2-jwt';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class BookingService {
 
-  private bookingsUrl = GlobalVariables.BASE_API_URL + '/users/';
+  private bookingsUrl = ENV.BASE_API_URL + '/users/';
 
   constructor(private authHttp: AuthHttp) { }
 
