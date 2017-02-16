@@ -1,0 +1,12 @@
+.worker section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+
+.worker section#care-worker{
+  height: 650px;
+  background-image: url('images/worker.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}

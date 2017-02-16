@@ -4,8 +4,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 export const ROUTES: RouteInfo[] = [
   { path: 'services', title: 'Services', menuType: MenuType.LEFT },
-  { path: 'about', title: 'About Us', menuType: MenuType.RIGHT },
-  { path: 'contact', title: 'Contact', menuType: MenuType.RIGHT }
+  { path: 'workers', title: 'Care Workers', menuType: MenuType.RIGHT },
+  { path: 'contact', title: 'Contact', menuType: MenuType.RIGHT },
+  { path: 'about', title: 'About Us', menuType: MenuType.RIGHT }
 ];
 
 export const LOGGED_IN_ROUTES: RouteInfo[] = [
@@ -20,6 +21,7 @@ import { SignupComponent } from '../signup/signup.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { NewBookingComponent } from '../newBooking/newBooking.component';
 import { ContactComponent } from '../contact/contact.component';
+import { WorkerComponent } from '../worker/worker.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent},
@@ -28,7 +30,8 @@ const appRoutes: Routes = [
     { path: 'signup', component: SignupComponent },
     { path: 'newBooking',  component: NewBookingComponent },
     { path: 'about',  component: AboutComponent},
-    { path: 'contact', component: ContactComponent}
+    { path: 'contact', component: ContactComponent},
+    { path: 'workers', component: WorkerComponent}
 ];
 
 export const NavbarRoutes: ModuleWithProviders = RouterModule.forRoot(appRoutes);
