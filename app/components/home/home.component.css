@@ -1,6 +1,6 @@
 .home section {
   padding-top: 100px;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 
 .home .heading {
@@ -19,7 +19,7 @@
 }
 
 .home section#carosel-section{
-  height: 600px;
+  height: 650px;
   background-image: url('images/care_1.jpg');
   background-size: cover;
   background-attachment: fixed;
