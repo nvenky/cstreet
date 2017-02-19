@@ -23,7 +23,7 @@
 }
 
 .home section#carosel-section{
-  height: 650px;
+  height: 550px;
   background-image: url('images/care_1.jpg');
   background-size: cover;
   background-attachment: fixed;
