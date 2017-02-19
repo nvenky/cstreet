@@ -15,7 +15,15 @@
   border-bottom: 3px solid #465c8b;
 }
 
-.nav-item.disabled .nav-link{
+.nav-item.selected .nav-link{
+  border-bottom: 3px solid #465c8b;
+}
+
+.nav-item.disabled .nav-link.active {
+  border-bottom: 3px solid #ccc!important;
+}
+
+.nav-item.disabled .nav-link {
   color: #bbb;
   transition: color 100ms ease-in-out,background-color 250ms ease-out
 }

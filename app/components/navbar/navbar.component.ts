@@ -68,12 +68,14 @@ export class NavbarComponent implements OnInit {
     }
 
     public menuEnter(event: any) {
+        $(event.srcElement).addClass('selected');
         $(event.srcElement).siblings().each(function(index: any, navItem: any) {
             $(navItem).addClass('disabled');
         });
     }
 
     public menuLeave(event: any) {
+      $(event.srcElement).removeClass('selected');
       $(event.srcElement).siblings().each(function(index: any, navItem: any) {
           $(navItem).removeClass('disabled');
       });
