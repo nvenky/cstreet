@@ -8,7 +8,7 @@
 
   <div class="collapse navbar-collapse mx-5" id="navbarContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item" *ngFor="let menuItem of menuItems" [ngClass]="getMenuItemClasses(menuItem)">
+      <li class="nav-item" *ngFor="let menuItem of menuItems" (mouseenter)="menuEnter($event)"  (mouseleave)="menuLeave($event)" [ngClass]="getMenuItemClasses(menuItem)">
         <a class="nav-link" [routerLink]="[menuItem.path]" routerLinkActive="active">{{menuItem.title}}</a>
       </li>
     </ul>

@@ -64,4 +64,16 @@ export class NavbarComponent implements OnInit {
             'pull-xs-right': this.isCollapsed && menuItem.menuType === MenuType.RIGHT
         };
     }
+
+    public menuEnter(event: any) {
+        $(event.srcElement).siblings().each(function(index: any, navItem: any) {
+            $(navItem).addClass('disabled');
+        });
+    }
+
+    public menuLeave(event: any) {
+      $(event.srcElement).siblings().each(function(index: any, navItem: any) {
+          $(navItem).removeClass('disabled');
+      });
+    }
 }
