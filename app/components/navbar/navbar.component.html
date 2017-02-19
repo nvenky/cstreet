@@ -6,19 +6,19 @@
     <img class="logo ml-5" alt="Brand" src="images/logo-icon.png">
   </a>
 
-  <div class="collapse navbar-collapse mx-5" id="navbarContent">
+  <div class="collapse navbar-collapse mx-5" id="navbar-content">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item" *ngFor="let menuItem of menuItems" (mouseenter)="menuEnter($event)"  (mouseleave)="menuLeave($event)" [ngClass]="getMenuItemClasses(menuItem)">
         <a class="nav-link" [routerLink]="[menuItem.path]" routerLinkActive="active">{{menuItem.title}}</a>
       </li>
     </ul>
     <ul class="navbar-nav">
-      <li class="mr-md-2">
+      <li class="mr-2 my-2">
         <a class="nav-link btn sky-blue px-3" *ngIf="!auth.authenticated()" (click)="auth.login('signUp')">Sign up</a>
       </li>
-      <li class="nav-item mr-md-2">
+      <li class="mr-2 my-2">
         <a class="nav-link btn btn-success px-3" *ngIf="!auth.authenticated()" (click)="auth.login('login')">Login</a>
-        <a class="nav-link btn btn-success px-3" *ngIf="auth.authenticated()" (click)="auth.logout()">Log Out</a>
+        <a class="nav-link btn btn-warning px-3" *ngIf="auth.authenticated()" (click)="auth.logout()">Log Out</a>
       </li>
     </ul>
   </div>

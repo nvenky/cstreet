@@ -5,6 +5,8 @@ import { Auth } from '../../services/auth.service';
 import { User } from '../../models/user';
 import { Router } from '@angular/router';
 
+declare var $: any;
+
 @Component({
     moduleId: module.id,
     selector: 'navbar',

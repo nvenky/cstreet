@@ -1,11 +1,23 @@
+#navbar-content {
+  height: 100%;
+}
+
+.nav-item {
+  display: table;
+  height: 100%;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
 .nav-link.active {
-  border-radius: 3px;
-  background-color: #465c8b;
-  color: white;
+  border-bottom: 3px solid #465c8b;
 }
 
 .nav-item.disabled .nav-link{
   color: #bbb;
+  transition: color 100ms ease-in-out,background-color 250ms ease-out
 }
 
 .logo{
@@ -13,11 +25,24 @@
 }
 
 .nav-link {
+  display: table-cell;
+  vertical-align: middle;
   color: black;
-  margin: 10px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+.navbar-brand {
+  padding: 0px;
 }
 
 .nav-link.btn {
+  color: white;
+  padding: 10px;
+  border: none;
+}
+
+.nav-link.btn:hover {
   color: white;
 }
 
@@ -38,6 +63,10 @@
 
 .sky-blue{
   background-color: #328cc1;
+}
+
+.sky-blue:hover{
+  background-color: #227CAE;
 }
 
 .gold{
