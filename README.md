@@ -166,4 +166,5 @@ which is easier to read; this file is excluded from source control.
 Shut it down manually with `Ctrl-C`
 
 daemon --name="cstreet" --output=out.log sh run.sh
-daemon --name="cstreet" --output=/home/ubuntu/cstreet_out.log sh /home/ubuntu/cstreet/run.sh
+sudo daemon --name="cstreet" --chdir /home/ubuntu/cstreet --output=cstreet_out.log sh run.sh
+daemon --stop --name="cstreet"
