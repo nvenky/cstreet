@@ -44,16 +44,6 @@
   padding: 0px;
 }
 
-.nav-link.btn {
-  color: white;
-  padding: 10px;
-  border: none;
-}
-
-.nav-link.btn:hover {
-  color: white;
-}
-
 .navbar-toggler {
   border: solid 1px silver;
   border-radius: 2px;
@@ -64,40 +54,4 @@
   height: 65px;
   padding: 0px;
   background-color: white;
-}
-
-.prussian-blue{
-  background-color: #0b3c5d;
-}
-
-.sky-blue{
-  background-color: #328cc1;
-}
-
-.sky-blue:hover{
-  background-color: #227CAE;
-}
-
-.gold{
-  background-color: #d9b310;
-}
-
-.ivory-black{
-  background-color: #1d2731;
-}
-
-.electric-blue{
-  background-color: #4cdef5;
-}
-
-.electric-green{
-  background-color: #a4d555;
-}
-
-.blush{
-  background-color: #ff5992;
-}
-
-.orchid{
-  background-color: #841983;
 }

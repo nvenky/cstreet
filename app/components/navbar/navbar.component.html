@@ -3,7 +3,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <a class="navbar-brand" [routerLink]="[brandMenuLink]">
-    <img class="logo ml-5" alt="Brand" src="images/logo-icon.png">
+    <img class="logo ml-5" alt="Brand" src="images/logo.jpg">
   </a>
 
   <div class="collapse navbar-collapse mx-5" id="navbar-content">
@@ -12,14 +12,14 @@
         <a class="nav-link" [routerLink]="[menuItem.path]" routerLinkActive="active">{{menuItem.title}}</a>
       </li>
     </ul>
+  </div>
     <ul class="navbar-nav">
-      <li class="mr-2 my-2">
-        <a class="nav-link btn sky-blue px-3" *ngIf="!auth.authenticated()" (click)="auth.login('signUp')">Sign up</a>
+      <li class="">
+        <a class="nav-link btn" *ngIf="!auth.authenticated()" (click)="auth.login('signUp')">Sign up</a>
       </li>
-      <li class="mr-2 my-2">
-        <a class="nav-link btn btn-success px-3" *ngIf="!auth.authenticated()" (click)="auth.login('login')">Login</a>
-        <a class="nav-link btn btn-warning px-3" *ngIf="auth.authenticated()" (click)="auth.logout()">Log Out</a>
+      <li class="mx-4">
+        <a class="nav-link btn" *ngIf="!auth.authenticated()" (click)="auth.login('login')">Login</a>
+        <a class="nav-link btn" *ngIf="auth.authenticated()" (click)="auth.logout()">Log Out</a>
       </li>
     </ul>
-  </div>
 </nav>

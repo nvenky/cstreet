@@ -22,11 +22,30 @@
   font-size: 0.8em;
 }
 
-.home section#carosel-section{
+#carosel-section{
   height: 550px;
   background-image: url('images/care_1.jpg');
   background-size: cover;
   background-attachment: fixed;
+}
+
+#how-it-works .icon {
+  width: 40px;
+  height: 40px;
+}
+
+#how-it-works .icon-wrap {
+  padding: 1%;
+  border-radius: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, .1);
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  text-align: center;
+}
+
+#how-it-works .icon:hover {
+  background-color: #00ADEF;
 }
 
 .home section#comments-section{
@@ -51,13 +70,6 @@
   background-color: #dfdce3;
   color: #000000;
 }
-
-.btn-sunshine {
-    color: #ffffff;
-    background-color: #f7b733;
-    border-color: #f7b733;
-}
-
 
 .bubble {
   position: relative;
