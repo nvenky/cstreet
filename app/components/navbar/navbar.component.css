@@ -12,11 +12,11 @@
 }
 
 .nav-link.active {
-  border-bottom: 3px solid #465c8b;
+  border-bottom: 3px solid #00ADEF;
 }
 
 .nav-item.selected .nav-link{
-  border-bottom: 3px solid #465c8b;
+  border-bottom: 3px solid #00ADEF;
 }
 
 .nav-item.disabled .nav-link.active {
