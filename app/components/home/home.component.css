@@ -33,6 +33,11 @@
   background-attachment: fixed;*/
 }
 
+#tech-easy img {
+  height: 200px;
+  margin-left: 30px;
+}
+
 .nav-tabs {
     border-bottom: none;
 }
