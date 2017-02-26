@@ -33,6 +33,10 @@
   background-attachment: fixed;*/
 }
 
+.nav-tabs {
+    border-bottom: none;
+}
+
 .icon-wrap .icon {
   padding: 20%;
   height: 100%;
@@ -42,17 +46,17 @@
   display: none;
 }
 
-.icon-wrap:hover .icon {
+.icon-wrap:hover .icon, .icon-wrap.active .icon {
   display: none;
 }
 
-.icon-wrap:hover .icon-active {
+.icon-wrap:hover .icon-active, .icon-wrap.active .icon-active  {
   display: inline;
-  padding: 20%;
+  padding: 18%;
   height: 100%;
 }
 
-#how-it-works .icon-wrap {
+#how-tabs .icon-wrap {
   width: 60px;
   height: 60px;
   margin: 10px;
@@ -60,12 +64,12 @@
   background-color: #fff;
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, .1);
   -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;
+  transition: all 0.5s ease 0s;
   text-align: center;
   display: inline-block;
 }
 
-#how-it-works .icon-wrap:hover {
+#how-tabs .icon-wrap:hover, #how-tabs .icon-wrap.active {
   box-shadow: 0 5px 12px 0 rgba(0, 0, 0, .3);
   background-color: #00ADEF;
 }

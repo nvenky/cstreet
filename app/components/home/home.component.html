@@ -1,7 +1,7 @@
 <div class='home'>
   <section id="carosel-section">
     <div class="container">
-      <div class="row align-middle text-right">
+      <div class="row text-right">
         <div class="col-12 heading">
           <h2 class="my-2">Caring Street</h2>
           <p class="px-2">Live Better</p>
@@ -36,42 +36,85 @@
           </a>
         </div> -->
   </section>
-  <section id="live-better" class="container-fluid">
+
+  <section id='how-it-works' class="container-fluid">
     <div class="container">
       <div class="row">
-          <div class="col-md-12 text-center">
+          <div class="col-12 text-center">
               <h2 class="heading">How it works</h2>
           </div>
       </div>
-      <div class="row justify-content-center text-center" id='how-it-works'>
-        <div class="col-2">
-            <a class="icon-wrap"style="transition: all 0.5s ease 0s;">
+      <div class="row justify-content-center text-center" id='how-tabs' role='tablist'>
+        <ul class="nav nav-tabs" id="how-tabs" role="tablist">
+          <li class="nav-item mx-4">
+            <a class="icon-wrap" data-toggle="tab" href="#book" role="tab" aria-controls="home">
               <img class="icon" src="images/icon/book-grey.svg">
               <img class="icon-active" src="images/icon/book-white.svg">
             </a>
             <p>1. Book</p>
-        </div>
-        <div class="col-2">
-            <a class="icon-wrap"style="transition: all 0.5s ease 0s;">
+          </li>
+
+        <li class="nav-item mx-4">
+            <a class="icon-wrap" href='#match' aria-controls="match" role="tab" data-toggle="tab">
               <img class="icon" src="images/icon/match-grey.svg">
               <img class="icon-active" src="images/icon/match-white.svg">
             </a>
             <p>2. Match</p>
-        </div>
-        <div class="col-2">
-            <a class="icon-wrap"style="transition: all 0.5s ease 0s;">
+        </li>
+        <li class="nav-item mx-4">
+            <a class="icon-wrap" href='#visit' aria-controls="visit" role="tab" data-toggle="tab">
               <img class="icon" src="images/icon/house-grey.svg">
               <img class="icon-active" src="images/icon/house-white.svg">
             </a>
             <p>3. Visit</p>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
+    </div>
+    <div class="tab-content">
+       <div role="tabpanel" class="tab-pane active fade" id="book">
+         <div class="container">
+           <div class="row">
+             <div class="col-12">
+               <h2>Book</h2>
+               <p>Book the visit</p>
+             </div>
+           </div>
+         </div>
+       </div>
+       <div role="tabpanel" class="tab-pane fade" id="match">
+         <div class="container">
+           <div class="row">
+             <div class="col-12">
+               <h2>Match</h2>
+               <p>Find a care worker that would match your requirements</p>
+             </div>
+           </div>
+         </div>
+       </div>
+       <div role="tabpanel" class="tab-pane fade" id="visit">
+         <div class="container">
+           <div class="row">
+             <div class="col-12">
+               <h2>Visit</h2>
+               <p>Care worker would visit your place</p>
+             </div>
+           </div>
+         </div>
+       </div>
+    </div>
+    <script>
+      $('#how-tabs a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+      });
+      $('#how-tabs a:first').tab('show');
+    </script>
   </section>
   <section id="live-better" class="container-fluid bg-faded">
     <div class="container">
       <div class="row">
-              <div class="col-md-12">
+              <div class="col-12">
                   <h2 class="heading">Technology makes it easier.</h2>
                   <p>Caring street provides an easy-to-use platform to schedule and manage home care for the elderly.
                   We curate an ever-growing network of care workers throughout Australia and connect them to you through smart technology.
