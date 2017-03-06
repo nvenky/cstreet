@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { BookingService } from './../../services/booking.service';
 import { Booking } from './../../models/booking';
+import { Auth } from '../../services/auth.service';
 
 @Component({
   moduleId: module.id,
   selector: 'home',
-  providers: [ BookingService ],
+  providers: [ BookingService, Auth ],
   templateUrl: 'home.component.html',
   styleUrls: [ 'home.component.css' ]
 })
@@ -13,7 +14,7 @@ import { Booking } from './../../models/booking';
 export class HomeComponent {
   bookings: Booking[];
 
-  constructor(bookingService: BookingService) {
+  constructor(auth: Auth, bookingService: BookingService) {
     // bookingService.getBookings().subscribe(
     //   (bookings: Booking[]) => this.bookings = bookings,
     //   (error: any) => console.error('An error occurred', error)

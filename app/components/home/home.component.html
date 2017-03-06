@@ -1,10 +1,12 @@
 <div class='home'>
   <section id="carosel-section">
     <div class="container">
-      <div class="row text-right">
-        <div class="col-12 heading">
-          <h2 class="my-2">Caring Street</h2>
-          <p class="px-2">Live Better</p>
+      <div class="row">
+        <div class="col-6 heading">
+          <h2>Caring street helps seniors live well at home.</h2>
+          <p class="px-2 subheading">We are a marketplace connecting seniors with the
+best care workers Australia has to offer</p>
+          <p class="px-2 schedule">Schedule a care worker now in less than 2 minutes</p>
         </div>
       </div>
     </div>
@@ -46,23 +48,23 @@
       </div>
       <div class="row justify-content-center text-center" id='how-tabs' role='tablist'>
         <ul class="nav nav-tabs" id="how-tabs" role="tablist">
-          <li class="nav-item mx-4">
-            <a class="icon-wrap active" data-toggle="tab" href="#book" role="tab" aria-controls="home">
+          <li class="nav-item">
+            <a class="icon-wrap active mx-4" data-toggle="tab" href="#book" role="tab" aria-controls="home">
               <img class="icon" src="images/icon/book-grey.svg">
               <img class="icon-active" src="images/icon/book-white.svg">
             </a>
             <p>1. Book</p>
           </li>
 
-        <li class="nav-item mx-4">
-            <a class="icon-wrap" href='#match' aria-controls="match" role="tab" data-toggle="tab">
+        <li class="nav-item">
+            <a class="icon-wrap mx-4" href='#match' aria-controls="match" role="tab" data-toggle="tab">
               <img class="icon" src="images/icon/match-grey.svg">
               <img class="icon-active" src="images/icon/match-white.svg">
             </a>
             <p>2. Match</p>
         </li>
-        <li class="nav-item mx-4">
-            <a class="icon-wrap" href='#visit' aria-controls="visit" role="tab" data-toggle="tab">
+        <li class="nav-item">
+            <a class="icon-wrap mx-4" href='#visit' aria-controls="visit" role="tab" data-toggle="tab">
               <img class="icon" src="images/icon/house-grey.svg">
               <img class="icon-active" src="images/icon/house-white.svg">
             </a>
@@ -71,13 +73,13 @@
       </ul>
     </div>
     </div>
-    <div class="tab-content">
+    <div class="tab-content mt-4">
        <div role="tabpanel" class="tab-pane fade show active" id="book">
          <div class="container">
            <div class="row">
              <div class="col-12">
-               <h2>Book</h2>
-               <p>Book the visit</p>
+               <h2>Tell us where, when and what you need</h2>
+               <p>Our easy to use platform will allow you to quickly let us know what your requirements are and how we can help</p>
              </div>
            </div>
          </div>
@@ -86,8 +88,8 @@
          <div class="container">
            <div class="row">
              <div class="col-12">
-               <h2>Match</h2>
-               <p>Find a care worker that would match your requirements</p>
+               <h2>We match you with one of our prequalified care workers</h2>
+               <p>Depending on the home care service that you request, we search our database and match you with the right care worker.</p>
              </div>
            </div>
          </div>
@@ -96,12 +98,19 @@
          <div class="container">
            <div class="row">
              <div class="col-12">
-               <h2>Visit</h2>
-               <p>Care worker would visit your place</p>
+               <h2>Take it easy. You're in good hands!</h2>
+               <p>Your care worker will head to your chosen location and provide you with the best possible care.</p>
              </div>
            </div>
          </div>
        </div>
+    </div>
+    <div class="container mt-3">
+      <div class="row">
+          <div class="col-12 text-center">
+              <a class="btn" (click)="auth.login('signUp')">Get Started Now</a>
+          </div>
+      </div>
     </div>
     <script>
       $('#how-tabs a').click(function (e) {
@@ -115,36 +124,36 @@
     <div class="container text-center">
       <div class="row">
           <div class="col-12">
-              <h2 class="heading">Schedule a care worker instantly</h2>
-              <p>abc abc</p>
+              <h2 class="heading">Caring street pros can help with…</h2>
+              <p>Give your loved ones their time and energy back by letting a caring street pro take some of the load off</p>
           </div>
-          <div class="row my-3">
-            <div class="col service mx-4  align-self-center">
-                 <img src='images/icon/hourglass.svg'>
-                <h3>Companionship</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, adipisicing elit dfg.</p>
+          <div class="row my-3 justify-content-center">
+            <div class="col-3 service align-self-center">
+                <img src='images/icon/hourglass.svg'>
+                <h4>Companionship</h4>
+                <p>Forming connections, doing activities together, or simply talking</p>
             </div>
-            <div class="col service mx-4  align-self-center">
+            <div class="col-3 service mx-4  align-self-center">
                 <img src='images/icon/car.svg'>
-                <h3>Transport</h3>
-                <p>Wherever you’re going, get a ride in a comfortable car—or yours if you prefer.</p>
+                <h4>Transport</h4>
+                <p>Doesn’t matter where you want to go, ride along with a care workers and sit back and relax</p>
             </div>
-            <div class="col service mx-4 align-self-center">
+            <div class="col-3 service mx-4 align-self-center">
                 <img src='images/icon/meal.svg'>
-                <h3>Meal Preparation</h3>
-                <p>From shopping for groceries to planning and preparing healthy meals you’ll love.</p>
+                <h4>Meal Preparation</h4>
+                <p>Plan and prepare delicious meals together, or head to the supermaket and grab the groceries</p>
             </div>
           </div>
-          <div class="row my-3">
-            <div class="col service mx-4 align-self-center">
+          <div class="row my-3 justify-content-center">
+            <div class="col-3 service mx-4">
                 <img src='images/icon/laundry.svg'>
-                <h3>Housekeeping</h3>
-                <p>Doing dishes or laundry, taking out the trash, plus seasonal projects and organizing.</p>
+                <h4>Housekeeping</h4>
+                <p>Washing dishes, laundry, help cleaning up around the house and taking out the rubbish</p>
             </div>
-            <div class="col service mx-4  align-self-center">
+            <div class="col-3 service mx-4">
                 <img src='images/icon/tub.svg'>
-                <h3>Personal Care and Hygiene</h3>
-                <p>Assistance with dressing, bathing, or toileting—always respectful and professional.</p>
+                <h4>Personal Care and Hygiene</h4>
+                <p>Help getting on/off the toilet, bathing and dressing</p>
             </div>
           </div>
         </div>
@@ -155,70 +164,48 @@
       <div class="row">
           <div class="col-12">
               <h2 class="heading">Our Advisors</h2>
+              <p>We didn't do it alone. Our platform has been developed based on the experience of our amazing advisors - some of brightest minds in the medical profession today</p>
           </div>
           <div class="row my-1">
             <div class="col advisor mx-3">
                 <img src='images/icon/doctor.svg'>
-                <h3>Mr. Abc Xyz</h3>
+                <h4>Mr. Abc Xyz</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, adipisicing elit dfg.</p>
             </div>
             <div class="col advisor mx-3">
                 <img src='images/icon/doctor.svg'>
-                <h3>Mr. Abc Xyz</h3>
+                <h4>Mr. Abc Xyz</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, adipisicing elit dfg.</p>
             </div>
             <div class="col advisor mx-3">
                 <img src='images/icon/doctor.svg'>
-                <h3>Mr. Abc Xyz</h3>
+                <h4>Mr. Abc Xyz</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, adipisicing elit dfg.</p>
             </div>
             <div class="col advisor mx-3">
                 <img src='images/icon/doctor.svg'>
-                <h3>Mr. Abc Xyz</h3>
+                <h4>Mr. Abc Xyz</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, adipisicing elit dfg.</p>
             </div>
           </div>
         </div>
     </div>
   </section>
-  <section class="container-fluid bg-faded" id="workers-trust">
+  <section class="container-fluid bg-faded" id="careworkers">
     <div class="container">
-      <div class="row my-3">
+      <div class="row">
         <div class="col-4">
           <img class="heading-logo" src="images/icon/checkmark.svg">
         </div>
         <div class="col-8">
             <h2 class="heading">Network of the best care workers in Australia.</h2>
-            <p>We interview and thoroughly screen every care professional before they can become an Care Workers at Caring Street. Only the best meet our standards.
-<br/><br/>We not only verify skills, training, and references, we also look for people who are compassionate, caring, and bring joy to their work every day.</p>
+            <p>"Applicants who wish to become caring street pros go through a strict interview and screening process. Only the top candidates meet our standards.
+                <br/><br/>
+                Of course Caring street pros have the right skills and experience, but in our interviews we look for empathy, compassion and a geniune desire to help seniors in our community"
+            </p>
         </div>
         </div>
     </div>
-  </section>
-  <section class="container-fluid" id="safety">
-      <div class="container">
-        <div class="row my-3">
-            <div class="col-md-12">
-                <h2 class="heading">Your safety is our top priority.</h2>
-            </div>
-        </div>
-        <div class="row my-1">
-          <div class="col-6">
-              <p class="check">Police Check</p>
-          </div>
-          <div class="col-6">
-              <p class="check">DMV record review</p>
-          </div>
-        </div>
-        <div class="row my-1">
-          <div class="col-6">
-              <p class="check">Sex Offender Check</p>
-          </div>
-          <div class="col-6">
-              <p class="check">60 Minute interview, including competency testing, scenario-based assessments, and in-person screening</p>
-          </div>
-        </div>
-      </div>
   </section>
   <section id="insurance" class="container-fluid bg-theme">
     <div class="container text-center">
@@ -241,18 +228,52 @@
       </div>
     </div>
   </section>
+  <section class="container-fluid" id="safety">
+      <div class="container">
+        <div class="row my-3">
+            <div class="col-md-12">
+                <h2 class="heading">Your safety is our top priority.</h2>
+            </div>
+        </div>
+        <div class="row my-1">
+          <div class="col-6">
+              <p class="check">Police Check</p>
+          </div>
+          <div class="col-6">
+              <p class="check">DMV record review</p>
+          </div>
+        </div>
+        <div class="row my-1">
+          <div class="col-6">
+              <p class="check">Sex Offender Check</p>
+          </div>
+          <div class="col-6">
+              <p class="check">Proof of qualification</p>
+          </div>
+          </div>
+        <div class="row my-1">
+          <div class="col-6">
+            <p class="check">Reference Checks</p>
+          </div>
+          <div class="col-6">
+              <p class="check">60 Minute interview, including competency testing, scenario-based assessments, and in-person screening</p>
+          </div>
+        </div>
+      </div>
+  </section>
   <section id="pricing" class="container-fluid bg-faded text-center">
     <div class="container">
       <div class="row">
           <div class="col-12">
               <h2 class="heading">Simple and affordable fixed pricing</h2>
+              <p>A simple flat hourly rate for a top rated care worker at your door. No fuss.</p>
           </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-4">
           <div class="price">
              <div class="header">
-               <a href="/signup">
+               <a (click)="auth.login('signUp')">
                  <h3 class="plan">Fixed Price</h3>
                  <div class="amount">
                    <span class="currency">$</span>
@@ -264,13 +285,13 @@
              <div class="price-main">
                <div class="specs">
                  <ul class="no-padding">
-                    <li>ABC <strong>5</strong> xyz</li>
-                    <li>abc <strong>5</strong> xyz</li>
-                    <li>abc <strong>5</strong> xyz</li>
+                    <li>Select from any of our services</li>
+                    <li>Phone and email support 24/7</li>
+                    <li>Provide feedback after each visit</li>
                  </ul>
                </div>
                <div class="actions mt-4">
-                  <a class="btn" href="/signup">Sign up now</a>
+                  <a class="btn" (click)="auth.login('signUp')">Sign up now</a>
                </div>
              </div>
           </div>
@@ -286,7 +307,7 @@
             <p>Caring street provides an easy-to-use platform to schedule and manage home care for the elderly.
             We curate an ever-growing network of care workers throughout Australia and connect them to you through smart technology.
             We’ve made scheduling home care as flexible as booking an uber. You can start a care schedule and change it or pause it at any time.
-            Find your winning strategy.</p>
+          </p>
         </div>
           <div class="col-4">
             <img class="heading-logo" src="images/icon/tech.svg">

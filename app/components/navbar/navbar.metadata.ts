@@ -1,11 +1,5 @@
-export enum MenuType {
-  BRAND,
-  LEFT,
-  RIGHT
-}
-
 export interface RouteInfo {
   path: string;
+  fragment: string;
   title: string;
-  menuType: MenuType;
 }

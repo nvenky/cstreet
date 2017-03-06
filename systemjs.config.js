@@ -30,6 +30,7 @@
       'moment':                     'node_modules/moment',
       'ng2-bootstrap':              'node_modules/ng2-bootstrap',
       // other libraries
+      'ng2-page-scroll': 'npm:ng2-page-scroll/bundles/ng2-page-scroll.umd.js',
       'rxjs':                       'npm:rxjs',
       'angular-in-memory-web-api':  'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js'
     },

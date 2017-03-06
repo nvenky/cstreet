@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ROUTES, LOGGED_IN_ROUTES } from './navbar-routes.config';
-import { MenuType } from './navbar.metadata';
+import { ROUTES, LOGGED_IN_ROUTES, SECTIONS } from './navbar-routes.config';
 import { Auth } from '../../services/auth.service';
 import { User } from '../../models/user';
 import { Router } from '@angular/router';
@@ -16,6 +15,7 @@ declare var $: any;
 })
 export class NavbarComponent implements OnInit {
     public menuItems: any[];
+    public menuSections: any[];
     public brandMenuLink: any;
     public currentUser: User;
     isCollapsed = false;
@@ -53,18 +53,13 @@ export class NavbarComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.menuSections = SECTIONS;
         this.menuItems = ROUTES;
         this.brandMenuLink = '';
     }
 
     public get menuIcon(): string {
         return this.isCollapsed ? '☰' : '✖';
-    }
-
-    public getMenuItemClasses(menuItem: any) {
-        return {
-            'pull-xs-right': this.isCollapsed && menuItem.menuType === MenuType.RIGHT
-        };
     }
 
     public menuEnter(event: any) {
