@@ -9,7 +9,7 @@
   <div class="collapse navbar-collapse mx-5" id="navbar-content">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item" *ngFor="let menuItem of menuSections" (mouseenter)="menuEnter($event)"  (mouseleave)="menuLeave($event)">
-        <a pagescroll class="nav-link"  href="{{menuItem.fragment}}">{{menuItem.title}}</a>
+        <a pagescroll class="nav-link"  href="/#{{menuItem.fragment}}">{{menuItem.title}}</a>
       </li>
       <li class="nav-item" *ngFor="let menuItem of menuItems" (mouseenter)="menuEnter($event)"  (mouseleave)="menuLeave($event)">
         <a class="nav-link" [routerLink]="[menuItem.path]" routerLinkActive="active">{{menuItem.title}}</a>

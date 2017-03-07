@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { BookingService } from './../../services/booking.service';
 import { Booking } from './../../models/booking';
+import { Contact } from './../../models/contact';
 import { Auth } from '../../services/auth.service';
 
 @Component({
@@ -13,8 +14,10 @@ import { Auth } from '../../services/auth.service';
 
 export class HomeComponent {
   bookings: Booking[];
+  public model = new Contact('', '', '');
 
   constructor(auth: Auth, bookingService: BookingService) {
+
     // bookingService.getBookings().subscribe(
     //   (bookings: Booking[]) => this.bookings = bookings,
     //   (error: any) => console.error('An error occurred', error)
