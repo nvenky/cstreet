@@ -55,3 +55,8 @@
   padding: 0px;
   background-color: white;
 }
+
+.yellow {
+  background-color: #FFCA35;
+  color: #2C2C2C!important;
+}

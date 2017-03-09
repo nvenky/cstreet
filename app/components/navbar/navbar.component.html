@@ -21,7 +21,7 @@
         <a class="nav-link btn" *ngIf="!auth.authenticated()" (click)="auth.login('signUp')">Sign up</a>
       </li>
       <li class="mx-4">
-        <a class="nav-link btn" *ngIf="!auth.authenticated()" (click)="auth.login('login')">Login</a>
+        <a class="nav-link btn yellow" *ngIf="!auth.authenticated()" (click)="auth.login('login')">Login</a>
         <a class="nav-link btn" *ngIf="auth.authenticated()" (click)="auth.logout()">Log Out</a>
       </li>
     </ul>
