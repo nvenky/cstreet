@@ -1,6 +1,6 @@
 .home section {
-  padding-top: 65px;
-  padding-bottom: 50px;
+  padding-top: 4em;
+  padding-bottom: 3em;
 }
 
 #carosel-section .heading {
@@ -83,15 +83,15 @@
 }
 
 .service {
-    border-radius: 0.4em 0.4em  0 0;
-    border: 1px solid #DADADB;
-    background: white;
-    padding: 0.5em;
-    /*margin: 0em 2em;*/
+  border-radius: 0.4em 0.4em  0 0;
+  border: 1px solid #DADADB;
+  background: white;
+  padding: 0.5em;
+  margin: 0.8em 0.5em;
 }
 
 .service:hover {
-  margin: 0em 0.3em;
+  margin: 0.4em 0.5em;
   -webkit-transition: all 500ms ease;
   transition: all 0.3s ease 0s;
   box-shadow: 0 0.3em 1em 0 rgba(66, 66, 66, .5);
@@ -109,6 +109,7 @@
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .13);
     background: white;
     padding: 1.3em;
+    margin: 0px 0.5em;
 }
 
 .advisor:hover {
@@ -262,15 +263,12 @@
     .heading-logo-section {
       display: none;
     }
-}
 
-@media (min-width: 1200px) {
-  .service {
-      padding: 1.5em;
-      /*margin: 0px 0.5em;*/
-  }
+    .service {
+      margin: 0.5em 1em;
+    }
 
-  .advisor {
-    margin: 0px 0.5em;
-  }
+    .advisor {
+      margin: 0.5em 1em;
+    }
 }
