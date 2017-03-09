@@ -6,7 +6,7 @@
     <img class="logo ml-lg-5" alt="Brand" src="images/logo.png">
   </a>
 
-  <div class="collapse navbar-collapse mx-lg-5 bg-faded" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse mx-lg-5" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item" *ngFor="let menuItem of menuSections" (mouseenter)="menuEnter($event)"  (mouseleave)="menuLeave($event)">
         <a pagescroll class="nav-link"  href="/#{{menuItem.fragment}}">{{menuItem.title}}</a>
