@@ -24,11 +24,11 @@
 }
 
 #carosel-section{
-  height: 550px;
+  height: 650px;
   background-image: url('images/care_1.jpg');
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center right;
+  background-size: cover;
+  background-position: top right;
   background-color: #F9F8EE;
   /*background-size: cover;
   background-attachment: fixed;*/
