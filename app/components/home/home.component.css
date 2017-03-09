@@ -24,11 +24,11 @@
 }
 
 #carosel-section{
-  height: 650px;
+  height: 40em;
   background-image: url('images/care_1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top right;
+  background-position: top left;
   background-color: #F9F8EE;
   /*background-size: cover;
   background-attachment: fixed;*/
@@ -83,10 +83,11 @@
 }
 
 .service {
-    border-radius: 5px 5px 0 0;
+    border-radius: 0.4em 0.4em  0 0;
     border: 1px solid #DADADB;
     background: white;
-    padding: 1.5em;
+    padding: 0.5em;
+    /*margin: 0em 2em;*/
 }
 
 .service:hover {
@@ -97,8 +98,8 @@
 }
 
 .service img {
-  height: 5em;
-  width: 5em;
+  height: 4em;
+  width: 4em;
   margin: 1em;
 }
 
@@ -255,4 +256,21 @@
 
 .no-padding {
     padding: 0px;
+}
+
+@media only screen and (max-device-width: 480px) {
+    .heading-logo-section {
+      display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+  .service {
+      padding: 1.5em;
+      /*margin: 0px 0.5em;*/
+  }
+
+  .advisor {
+    margin: 0px 0.5em;
+  }
 }
