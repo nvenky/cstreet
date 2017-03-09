@@ -4,6 +4,14 @@ h1 {
   font-size: 250%;
 }
 
+.container {
+  max-width: 1040px;
+}
+
+p {
+  font-size: 1.25em;
+}
+
 .btn {
   margin-left: 15px;
   color: white!important;
