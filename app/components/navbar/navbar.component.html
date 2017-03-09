@@ -1,12 +1,12 @@
-<nav class="navbar navbar-toggleable-md fixed-top">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-toggleable-md navbar-light fixed-top">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <a class="navbar-brand" [routerLink]="[brandMenuLink]">
-    <img class="logo ml-5" alt="Brand" src="images/logo.png">
+    <img class="logo ml-lg-5" alt="Brand" src="images/logo.png">
   </a>
 
-  <div class="collapse navbar-collapse mx-5" id="navbar-content">
+  <div class="collapse navbar-collapse mx-lg-5 bg-faded" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item" *ngFor="let menuItem of menuSections" (mouseenter)="menuEnter($event)"  (mouseleave)="menuLeave($event)">
         <a pagescroll class="nav-link"  href="/#{{menuItem.fragment}}">{{menuItem.title}}</a>
@@ -15,14 +15,10 @@
         <a class="nav-link" [routerLink]="[menuItem.path]" routerLinkActive="active">{{menuItem.title}}</a>
       </li>
     </ul>
+    <form class="form-inline">
+        <button id='sign-up' class="nav-link btn" *ngIf="!auth.authenticated()" (click)="auth.login('signUp')">Sign up</button>
+        <button class="nav-link btn yellow" *ngIf="!auth.authenticated()" (click)="auth.login('login')">Login</button>
+        <button class="nav-link btn" *ngIf="auth.authenticated()" (click)="auth.logout()">Log Out</button>
+    </form>
   </div>
-    <ul class="navbar-nav">
-      <li class="">
-        <a class="nav-link btn" *ngIf="!auth.authenticated()" (click)="auth.login('signUp')">Sign up</a>
-      </li>
-      <li class="mx-4">
-        <a class="nav-link btn yellow" *ngIf="!auth.authenticated()" (click)="auth.login('login')">Login</a>
-        <a class="nav-link btn" *ngIf="auth.authenticated()" (click)="auth.logout()">Log Out</a>
-      </li>
-    </ul>
 </nav>
