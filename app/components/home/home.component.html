@@ -3,45 +3,18 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-md-12 heading">
-          <h2>Caring street helps seniors live well at home.</h2>
+          <h2>Connecting seniors with the best care workers Australia has to offer.</h2>
           <p class="px-2 subheading">A marketplace connecting seniors with the
 best care workers Australia has to offer</p>
           <p class="px-2 schedule">Schedule a care worker now in less than 2 minutes</p>
         </div>
       </div>
       <div class="row">
-          <div class="col-lg-6 col-md-12 text-center">
+          <div class="col-lg-6 col-md-12">
               <a class="btn" (click)="auth.login('signUp')">Sign up</a>
           </div>
       </div>
     </div>
-          <!-- <img class="d-block img-fluid" src="images/care_1.jpg" alt="First Image"> -->
-        <!-- <div id="carousel" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel" data-slide-to="1"></li>
-            <li data-target="#carousel" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-              <img class="d-block img-fluid" src="images/care_1.jpg" alt="First slide">
-            </div>
-            <div class="carousel-item">
-              <img class="d-block img-fluid" src="images/care_2.jpg" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-              <img class="d-block img-fluid" src="images/care_3.jpg" alt="Second slide">
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div> -->
   </section>
 
   <section id='how-it-works' class="container-fluid bg-faded">
@@ -54,7 +27,7 @@ best care workers Australia has to offer</p>
       <div class="row justify-content-center text-center" id='how-tabs' role='tablist'>
         <ul class="nav nav-tabs" id="how-tabs" role="tablist">
           <li class="nav-item">
-            <a class="icon-wrap active mx-4" data-toggle="tab" href="#book" role="tab" aria-controls="home">
+            <a class="icon-wrap active" data-toggle="tab" href="#book" role="tab" aria-controls="home">
               <img class="icon" src="images/icon/book-grey.svg">
               <img class="icon-active" src="images/icon/book-white.svg">
             </a>
@@ -62,14 +35,14 @@ best care workers Australia has to offer</p>
           </li>
 
         <li class="nav-item">
-            <a class="icon-wrap mx-4" href='#match' aria-controls="match" role="tab" data-toggle="tab">
+            <a class="icon-wrap" href='#match' aria-controls="match" role="tab" data-toggle="tab">
               <img class="icon" src="images/icon/match-grey.svg">
               <img class="icon-active" src="images/icon/match-white.svg">
             </a>
             <p>2. Match</p>
         </li>
         <li class="nav-item">
-            <a class="icon-wrap mx-4" href='#visit' aria-controls="visit" role="tab" data-toggle="tab">
+            <a class="icon-wrap" href='#visit' aria-controls="visit" role="tab" data-toggle="tab">
               <img class="icon" src="images/icon/house-grey.svg">
               <img class="icon-active" src="images/icon/house-white.svg">
             </a>
@@ -78,13 +51,16 @@ best care workers Australia has to offer</p>
       </ul>
     </div>
     </div>
-    <div class="tab-content mt-4">
+    <div class="tab-content mt-4 align-items-center">
        <div role="tabpanel" class="tab-pane fade show active" id="book">
          <div class="container">
            <div class="row">
-             <div class="col-12">
+             <div class="col-lg-8 col-md-12">
                <h2>Tell us where, when and what you need</h2>
                <p>Our easy to use platform will allow you to quickly let us know what your requirements are and how we can help</p>
+             </div>
+             <div class="col-lg-4 heading-logo-section">
+               <img src='images/icon/calendar.svg'>
              </div>
            </div>
          </div>
@@ -92,9 +68,12 @@ best care workers Australia has to offer</p>
        <div role="tabpanel" class="tab-pane fade" id="match">
          <div class="container">
            <div class="row">
-             <div class="col-12">
+             <div class="col-lg-8 col-md-12">
                <h2>We match you with one of our prequalified care workers</h2>
                <p>Depending on the home care service that you request, we search our database and match you with the right care worker.</p>
+             </div>
+             <div class="col-lg-4 heading-logo-section">
+               <img src='images/icon/match.svg'>
              </div>
            </div>
          </div>
@@ -102,18 +81,21 @@ best care workers Australia has to offer</p>
        <div role="tabpanel" class="tab-pane fade" id="visit">
          <div class="container">
            <div class="row">
-             <div class="col-12">
+             <div class="col-lg-8 col-md-12">
                <h2>Take it easy. You're in good hands!</h2>
                <p>Your care worker will head to your chosen location and provide you with the best possible care.</p>
+             </div>
+             <div class="col-lg-4 heading-logo-section">
+               <img src='images/icon/visit.svg'>
              </div>
            </div>
          </div>
        </div>
     </div>
-    <div class="container mt-3">
+    <div class="container mt-4">
       <div class="row">
           <div class="col-12 text-center">
-              <a class="btn" (click)="auth.login('signUp')">Get Started Now</a>
+              <a class="btn yellow" (click)="auth.login('signUp')">Get Started Now</a>
           </div>
       </div>
     </div>
@@ -132,7 +114,7 @@ best care workers Australia has to offer</p>
               <h2 class="heading">Caring street pros can help with…</h2>
               <p>Give your loved ones their time and energy back by letting a caring street pro take some of the load off</p>
           </div>
-          <div class="row justify-content-center">
+          <div class="row justify-content-center mt-3">
             <div class="col-lg-3 col-md-12 service">
                 <img src='images/icon/hourglass.svg'>
                 <h4>Companionship</h4>
@@ -171,7 +153,7 @@ best care workers Australia has to offer</p>
               <h2 class="heading">Our Advisors</h2>
               <p>We didn't do it alone. Our platform has been developed based on the experience of our amazing advisors - some of brightest minds in the medical profession today</p>
           </div>
-          <div class="row">
+          <div class="row mt-3">
             <div class="col-lg col-md-12 advisor">
                 <img src='images/icon/doctor.svg'>
                 <h4>Mr. Abc Xyz</h4>
@@ -216,7 +198,7 @@ best care workers Australia has to offer</p>
     <div class="container">
       <div class="row align-items-center">
         <div class="col-4 heading-logo-section">
-          <img class="heading-logo" src="images/icon/checkmark.svg">
+          <img class="heading-logo" src="images/icon/network.svg">
         </div>
         <div class="col-lg-8 col-md-12">
             <h2 class="heading">Network of the best care workers in Australia.</h2>
@@ -228,32 +210,12 @@ best care workers Australia has to offer</p>
         </div>
     </div>
   </section>
-  <section id="insurance" class="container-fluid bg-theme">
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-4 px-3">
-            <img class="icon my-3" src="images/icon/insurance.svg">
-            <h2 class="heading">Full insurance cover</h2>
-            <p>Relax knowing your Care worker is covered by Caring Street's insurance policies.</p>
-        </div>
-        <div class="col-4 px-3">
-            <img class="icon my-3" src="images/icon/match-white.svg">
-            <h2 class="heading">Instant matching</h2>
-            <p>Our instant matching algorithm matches you with the best care worker in realtime.</p>
-        </div>
-        <div class="col-4 px-3">
-            <img class="icon my-3" src="images/icon/quality.svg">
-            <h2 class="heading">Service guarantee</h2>
-            <p>If there's any major issue with the service you receive, we will offer you a refund.</p>
-        </div>
-      </div>
-    </div>
-  </section>
   <section class="container-fluid" id="safety">
       <div class="container">
         <div class="row my-3">
             <div class="col-md-12">
                 <h2 class="heading">Your safety is our top priority.</h2>
+                <p>As part of our recruitment process, every care worker application we receive will be assessed against the following criteria:</p>
             </div>
         </div>
         <div class="row my-1">
@@ -282,6 +244,27 @@ best care workers Australia has to offer</p>
         </div>
       </div>
   </section>
+  <section id="insurance" class="container-fluid bg-theme">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-4 px-3">
+            <img class="icon my-3" src="images/icon/insurance.svg">
+            <h2 class="heading">Full insurance cover</h2>
+            <p>Relax knowing your Care worker is covered by Caring Street's insurance policies.</p>
+        </div>
+        <div class="col-4 px-3">
+            <img class="icon my-3" src="images/icon/match-white.svg">
+            <h2 class="heading">Instant matching</h2>
+            <p>Our instant matching algorithm matches you with the best care worker in realtime.</p>
+        </div>
+        <div class="col-4 px-3">
+            <img class="icon my-3" src="images/icon/quality.svg">
+            <h2 class="heading">Service guarantee</h2>
+            <p>If there's any major issue with the service you receive, we will offer you a refund.</p>
+        </div>
+      </div>
+    </div>
+  </section>
   <section id="pricing" class="container-fluid text-center bg-faded">
     <div class="container">
       <div class="row">
@@ -290,7 +273,7 @@ best care workers Australia has to offer</p>
               <p>A simple flat hourly rate for a top rated care worker at your door. No fuss.</p>
           </div>
       </div>
-      <div class="row justify-content-center">
+      <div class="row justify-content-center mt-3">
         <div class="col-lg-4 col-md-12">
           <div class="price mt-2">
              <div class="header">
@@ -325,17 +308,21 @@ best care workers Australia has to offer</p>
       <div class="row">
         <div class="col-lg-6 col-md-12">
             <h2 class="heading">Schedule a call at anytime to discuss</h2>
-            <p>"We know finding a care worker for you or your loved one is an emotional decision.
+            <p>We know finding a care worker for you or your loved one is an emotional decision.
               We'd be delighted to call you back and answer any questions you may have.</p>
         </div>
         <div class="col-lg-6 col-md-12">
           <form class="" ngNoForm method='post' novalidate="">
             <div class="form-group row">
-              <div class="col text-center">
+              <div class="col">
                 <input class="form-control my-2" [(ngModel)]="model.name" name="name" id="name" placeholder="Your name" required>
                 <input class="form-control my-2" [(ngModel)]="model.phone" name="phone" id="phone" placeholder="Your phone number" required>
                 <input type="email" class="form-control my-2" [(ngModel)]="model.email" placeholder="Your email" required>
-                <button type="button" class="btn my-2" (click)="contact()">Get in touch</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <button type="button" class="btn no-margin" (click)="contact()">Get in touch</button>
               </div>
             </div>
           </form>

@@ -56,11 +56,6 @@
   background-color: white;
 }
 
-.yellow {
-  background-color: #FFCA35;
-  color: #2C2C2C!important;
-}
-
 @media only screen and (max-device-width: 480px) {
   #navbarSupportedContent {
     background-color: #f7f7f7;
