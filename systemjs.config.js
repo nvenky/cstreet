@@ -30,9 +30,8 @@
       'moment':                     'node_modules/moment',
       'ng2-bootstrap':              'node_modules/ng2-bootstrap',
       // other libraries
-      'ng2-page-scroll': 'npm:ng2-page-scroll/bundles/ng2-page-scroll.umd.js',
-      'rxjs':                       'npm:rxjs',
-      'angular-in-memory-web-api':  'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js'
+      // 'angular2-devise-token-auth': 'npm:angular2-devise-token-auth/dist/',
+      'rxjs':                       'npm:rxjs'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -43,12 +42,22 @@
       rxjs: {
         defaultExtension: 'js'
       },
-      'angular2-jwt'  : {
+      'angular2-jwt': {
         defaultExtension: 'js'
       },
-    // ng2-bootstrap
-     'ng2-bootstrap':              { format: 'cjs', main: 'bundles/ng2-bootstrap.umd.js', defaultExtension: 'js' },
-     moment:                     { main: 'moment.js', defaultExtension: 'js' }
+      // 'angular2-devise-token-auth': {
+      //   main: 'angular2-devise-token-auth.js',
+      //   defaultExtension: 'js'
+      // },
+     'ng2-bootstrap': {
+       format: 'cjs',
+       main: 'bundles/ng2-bootstrap.umd.js',
+       defaultExtension: 'js'
+     },
+     moment: {
+       main: 'moment.js',
+       defaultExtension: 'js'
+     }
     }
   });
 })(this);

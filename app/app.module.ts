@@ -4,8 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AUTH_PROVIDERS } from 'angular2-jwt';
-import { Ng2PageScrollModule } from 'ng2-page-scroll';
-
 
 import { AppComponent }  from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -26,7 +24,7 @@ import { Auth } from './services/auth.service';
 import { Global } from './global';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpModule, NavbarRoutes, Ng2PageScrollModule.forRoot()],
+  imports:      [ BrowserModule, FormsModule, HttpModule, NavbarRoutes ],
   declarations: [ AppComponent, HomeComponent, AboutComponent, NavbarComponent,
                   FooterComponent, ServicesComponent, SignupComponent, DashboardComponent,
                   NewBookingComponent, ContactComponent, WorkerComponent ],

@@ -26,7 +26,7 @@ h1 {
   color: #2C2C2C!important;
 }
 
-@media only screen and (max-device-width: 960px) {
+@media only screen and (min-device-width: 960px) {
   .container {
     max-width: 1040px;
   }
